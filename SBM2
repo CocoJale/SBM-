@@ -60,7 +60,7 @@ local Tab2 = GameName:NewSection("World TP")
 Tab2:CreateButton("Forest", function(value)
 for i = 1, 1 do
 local args = {
-    [1] = "Forest"
+    [1] = "Meadow"
 }
 
 game:GetService("ReplicatedStorage").Other.TeleportPlayer:FireServer(unpack(args))
@@ -70,7 +70,7 @@ end)
 Tab2:CreateButton("Glacier", function(value)
 for i = 1, 1 do
 local args = {
-    [1] = "Forest"
+    [1] = "Glacier"
 }
 
 game:GetService("ReplicatedStorage").Other.TeleportPlayer:FireServer(unpack(args))
@@ -79,7 +79,7 @@ end)
 Tab2:CreateButton("Hell", function(value)
 for i = 1, 1 do
 local args = {
-    [1] = "Forest"
+    [1] = "Hell"
 }
 
 game:GetService("ReplicatedStorage").Other.TeleportPlayer:FireServer(unpack(args))
