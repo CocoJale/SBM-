@@ -1,0 +1,58 @@
+GameName = "ShootBeamSim"
+
+tab1name = "Main"
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local GameName = Library:NewWindow(GameName)
+
+local Tab1 = GameName:NewSection(tab1name)
+
+Tab1:CreateButton("Wins", function(value)
+for i = 1, 200 do
+local args = {
+    [1] = "Wins",
+    [2] = 50000
+}
+
+game:GetService("ReplicatedStorage").Boosts.PlaytimeReward:FireServer(unpack(args))
+end
+ end)
+
+Tab1:CreateButton("Power", function(value)
+for i = 1, 200 do
+game:GetService("ReplicatedStorage"):WaitForChild("Power"):WaitForChild("GivePower"):FireServer()
+end
+ end)
+
+Tab1:CreateButton("Spins", function(value)
+for i = 1, 5 do
+local args = {
+    [1] = "Spins",
+    [2] = 10000
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AddValue"):FireServer(unpack(args))
+end
+ end)
+
+Tab1:CreateButton("OP Pets", function(value)
+for i = 1, 5 do
+local args = {
+    [1] = {
+        [1] = "Frost Spirit",
+        [2] = false,
+        [3] = "Baby",
+        [4] = "1706286209151060"
+    },
+    [2] = "Pets",
+    [3] = "Epic Frost",
+    [4] = 3,
+    [6] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AddValueToTable"):FireServer(unpack(args))
+end
+ end)
+
+local Tab2 = GameName:NewSection("maroscripts69")
